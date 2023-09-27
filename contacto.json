@@ -1,0 +1,11 @@
+{
+    "contacto":{
+        "nombre":"Fede",
+        "correo":"fede@tlacorp.com",
+        "telefono":"670710141",
+        "asunto":"Licencia de obras",
+        "tipo":"Construcción",
+        "nacionalidad":"Inglesa",
+        "descripcion":"Quiero sacar una licencia de obras para reformar mi casa"  
+    }
+}

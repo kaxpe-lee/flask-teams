@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Formulario de contacto</h1>
+<form method="POST" action="/">
+    {{ form1.csrf_token }}
+    <div class="row" style="margin: 0px 250px">
+        <div class="col-12 mb-2">
+            {{ form1.nombre.label }}</br>
+            {{ form1.nombre(class_="mt-1 form-control") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.correo.label }}</br>
+            {{ form1.correo(class_=" mt-1 form-control") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.telefono.label }}</br>
+            {{ form1.telefono(class_=" mt-1 form-control") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.asunto.label }}</br>
+            {{ form1.asunto(class_=" mt-1 form-control") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.tipo.label }}</br>
+            {{ form1.tipo(class_=" mt-1 form-select") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.nacionalidad.label }}</br>
+            {{ form1.nacionalidad(class_=" mt-1 form-select") }}
+        </div>
+        <div class="col-12 mb-2">
+            {{ form1.descripcion.label }}</br>
+            {{ form1.descripcion(class_=" mt-1 form-control") }}
+        </div>
+        <div class="col-12 mb-2">
+            
+            {{ form1.politica.label }}</br>
+            {{ form1.politica(class_=" mt-1 form-check-input") }}
+        </div>
+        <div class="col-12 mb-2">
+            
+            {{ form1.info.label }}</br>
+            {{ form1.info(class_=" mt-1 form-check-input") }}
+        </div>
+    <input type="submit" value="Enviar" class="btn btn-primary">
+</form>
+{% endblock %}
