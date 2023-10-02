@@ -5,7 +5,9 @@ import pymsteams
 app = Flask(__name__)
 app.debug = True
 
-app.config.from_object('config.DevelopmentConfig')
+#app.config.from_object('config.DevelopmentConfig')
+app.config['CONNECTORCARD'] = os.environ.get('CONNECTORCARD')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 from forms import cliente
 
