@@ -5,9 +5,7 @@ import pymsteams
 app = Flask(__name__)
 app.debug = True
 
-#app.config.from_object('config.DevelopmentConfig')
-app.config['CONNECTORCARD'] = os.environ.get('CONNECTORCARD')
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config.from_object('config.DevelopmentConfig')
 
 from forms import cliente
 
@@ -27,7 +25,7 @@ def index():
         import pymsteams
 
         # Initialize the connector card with your webhook URL
-        myTeamsMessage = pymsteams.connectorcard(app.config['CONNECTORCARD'])
+        myTeamsMessage = pymsteams.connectorcard(os.environ.get('CONNECTORCARD'))
 
         # Set the message color
         myTeamsMessage.color("#F8C471")
