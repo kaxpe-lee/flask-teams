@@ -11,6 +11,7 @@ from forms import cliente
 
 @app.route('/',methods = ['GET', 'POST'])
 def index():
+    return "Hello"
     if request.method == 'POST':
         nombre = request.form.get('nombre')
         correo = request.form.get('correo')
